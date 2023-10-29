@@ -1,4 +1,5 @@
 # Otus DWH project
+## The source ot the dataset - https://www.kaggle.com/datasets/teamincribo/cyber-security-attacks
 
 
 1. Add enviroment variables with clickhouse user:
