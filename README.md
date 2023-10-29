@@ -36,3 +36,21 @@
     export DBT_USER=${CLICKHOUSE_USER}
     export DBT_PASSWORD=${TF_VAR_clickhouse_password}
     ```
+
+5. Make sure dbt can connect to your target database:
+    
+    ```bash
+    dbt debug
+    ```
+
+![Alt text](image-1.png)
+
+6. Load csv file to my target database:
+    
+    ```bash
+    dbt seed
+    ```
+
+![Alt text](image-2.png)
+
+

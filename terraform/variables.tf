@@ -6,7 +6,7 @@ variable "admin_password" {
 
 
 data "yandex_mdb_clickhouse_cluster" "foo" {
-  name = "click-test"
+  name = "click-cluster"
 }
 
 output "clickhouse_host_fqdn" {

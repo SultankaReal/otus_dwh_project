@@ -1,5 +1,6 @@
 .env
 logs/
+target/
 dbt_packages/
 terraform/.terraform/
 terraform/*.tfstate
