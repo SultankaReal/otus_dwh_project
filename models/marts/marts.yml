@@ -1,0 +1,31 @@
+version: 2
+
+models:
+    - name: attacks_number_of_attack_types
+      description: Number of attacks per attack type
+      columns:
+        - name: at
+          tests:
+            - not_null
+            - unique
+    - name: attacks_number_of_attacks_proto
+      description: Number of attacks per protocol
+      columns: 
+        - name: prot
+          tests: 
+            - not_null
+            - unique
+    - name: attacks_number_of_attacks_sev_level
+      description: Number of attacks for every severity level
+      columns: 
+        - name: sl
+          tests: 
+            - not_null
+            - unique
+    - name: attacks_traffic_type
+      description: Number of attacks per traffic type
+      columns: 
+        - name: tt
+          tests: 
+            - not_null
+            - unique

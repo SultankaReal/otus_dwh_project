@@ -1,0 +1,1 @@
+SELECT `Severity Level` as sl, count(*) as Co from test.cybersecurity_attacks ca group by `Severity Level` ORDER BY count(*) desc

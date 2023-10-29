@@ -1,0 +1,1 @@
+SELECT `Traffic Type` as tt, count(*) as Co from test.cybersecurity_attacks ca group by `Traffic Type` ORDER BY count(*) desc

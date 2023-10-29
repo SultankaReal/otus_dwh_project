@@ -1,0 +1,25 @@
+config:
+  send_anonymous_usage_stats: False
+  use_colors: True
+  partial_parse: True
+
+project_lab:
+  outputs:
+    prod:
+      type: clickhouse
+      schema: test
+      host: "{{ env_var('DBT_HOST') }}"
+      port: 8443
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_PASSWORD') }}"
+      secure: True
+      verify: False
+      connect_timeout: 10000
+      #connect_timeout: None
+    # ci:
+    #   type: clickhouse
+    #   host: clickhouse
+    #   port: 8123
+    #   schema: default
+    #   threads: 4
+  target: prod
