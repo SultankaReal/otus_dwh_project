@@ -1,1 +1,1 @@
-SELECT `Severity Level` as sl, count(*) as Co from test.cybersecurity_attacks ca group by `Severity Level` ORDER BY count(*) desc
+select `Severity Level` as Severity, count(*) as Number from otus.cybersecurity_attacks ca group by Severity ORDER BY Number desc

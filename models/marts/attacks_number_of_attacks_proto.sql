@@ -1,1 +1,1 @@
-SELECT `Protocol` as prot, count(*) as Co from test.cybersecurity_attacks ca group by `Protocol` ORDER BY count(*) desc
+select `Protocol` as Protocol, count(*) as Number from otus.cybersecurity_attacks ca group by Protocol ORDER BY Number desc

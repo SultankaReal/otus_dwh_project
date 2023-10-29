@@ -53,4 +53,9 @@
 
 ![Alt text](image-2.png)
 
+7. Build marts:
+    ```bash
+    dbt build -s tag:marts --full-refresh
+    ```
 
+![Alt text](image-3.png)

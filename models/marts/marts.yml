@@ -4,28 +4,35 @@ models:
     - name: attacks_number_of_attack_types
       description: Number of attacks per attack type
       columns:
-        - name: at
+        - name: AttackType
           tests:
             - not_null
             - unique
     - name: attacks_number_of_attacks_proto
       description: Number of attacks per protocol
       columns: 
-        - name: prot
+        - name: Protocol
           tests: 
             - not_null
             - unique
     - name: attacks_number_of_attacks_sev_level
       description: Number of attacks for every severity level
       columns: 
-        - name: sl
+        - name: Severity
           tests: 
             - not_null
             - unique
     - name: attacks_traffic_type
       description: Number of attacks per traffic type
       columns: 
-        - name: tt
+        - name: TrafficType
           tests: 
+            - not_null
+            - unique
+    - name: attacks_each_year
+      description: Number of attacks per year (since 2020 until 2023)
+      columns: 
+        - name: Year
+          tests:
             - not_null
             - unique

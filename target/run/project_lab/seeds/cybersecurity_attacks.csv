@@ -1,15 +1,7 @@
 
     
     
-    
-    create table otus.cybersecurity_attacks 
-   ("Timestamp" DateTime,"Source IP Address" String,"Destination IP Address" String,"Source Port" Int32,"Destination Port" Int32,"Protocol" String,"Packet Length" Int32,"Packet Type" String,"Traffic Type" String,"Payload Data" String,"Malware Indicators" String,"Anomaly Scores" Float32,"Alerts/Warnings" String,"Attack Type" String,"Attack Signature" String,"Action Taken" String,"Severity Level" String,"User Information" String,"Device Information" String,"Network Segment" String,"Geo-location Data" String,"Proxy Information" String,"Firewall Logs" String,"IDS/IPS Alerts" String,"Log Source" String)
-    
-  engine = MergeTree()
-    
-      order by (tuple())
-    
-  ;
+    truncate table otus.cybersecurity_attacks;
     -- dbt seed --
     
   

@@ -1,1 +1,1 @@
-select `Attack Type` as at, count(*) as Co from test.cybersecurity_attacks ca group by `Attack Type` ORDER BY count(*) desc
+select `Attack Type` as AttackType, count(*) as Number from otus.cybersecurity_attacks ca group by AttackType ORDER BY Number desc
