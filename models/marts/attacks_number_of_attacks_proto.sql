@@ -1,1 +1,2 @@
-select `Protocol` as Protocol, count(*) as Number from otus.cybersecurity_attacks ca group by Protocol ORDER BY Number desc
+select `Protocol` as Protocol, count(*) as Number from otus.cybersecurity_attacks ca 
+group by Protocol ORDER BY Number desc

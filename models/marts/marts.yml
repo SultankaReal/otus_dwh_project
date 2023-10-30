@@ -36,3 +36,31 @@ models:
           tests:
             - not_null
             - unique
+    - name: attacks_intrusion
+      description: Number of attacks with intrusion, high severity and without being triggered in alerts
+      columns: 
+        - name: TrafficType
+          tests:
+            - not_null
+            #- unique
+    - name: attacks_most_per_segment
+      description: Number of attacks per network segment
+      columns: 
+        - name: NetworkSegment
+          tests:
+            - not_null
+            - unique
+    - name: attacks_with_without_alerts
+      description: Number of attacks without alerts
+      columns: 
+        - name: AlertWarn
+          tests:
+            - not_null
+            - unique
+    - name: attacks_ddos_not_blocked
+      description: Number of DDoS attacks with high severity and not being blocked
+      columns: 
+        - name: SourceIP
+          tests:
+            - not_null
+            - unique

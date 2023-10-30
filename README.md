@@ -1,7 +1,11 @@
 # Otus DWH project
-## The source ot the dataset - https://www.kaggle.com/datasets/teamincribo/cyber-security-attacks
+## [The source ot the dataset](https://www.kaggle.com/datasets/teamincribo/cyber-security-attacks)
+## Prerequisites
 
+- Install dbt
+- Install terraform
 
+## Assignment
 1. Add enviroment variables with clickhouse user:
    
    ```bash
@@ -58,4 +62,4 @@
     dbt build -s tag:marts --full-refresh
     ```
 
-![Alt text](image-3.png)
+![Alt text](image-4.png)
