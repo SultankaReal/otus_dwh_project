@@ -22,13 +22,6 @@ models:
           tests: 
             - not_null
             - unique
-    - name: attacks_traffic_type
-      description: Number of attacks per traffic type
-      columns: 
-        - name: TrafficType
-          tests: 
-            - not_null
-            - unique
     - name: attacks_each_year
       description: Number of attacks per year (since 2020 until 2023)
       columns: 
@@ -42,7 +35,6 @@ models:
         - name: TrafficType
           tests:
             - not_null
-            #- unique
     - name: attacks_most_per_segment
       description: Number of attacks per network segment
       columns: 
