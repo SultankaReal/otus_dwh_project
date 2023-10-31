@@ -3,6 +3,6 @@ where TrafficType = 'DNS' and MalInd LIKE '%IoC Detected%'
 and `Alerts/Warnings` not like '%Triggered%' 
 and `Severity Level` = 'High' 
 and AttackType like '%Intrusion%'
-and AnomSco > 50
+and AnomSco > 9
 order by 4 desc
-LIMIT 15
+LIMIT 5
