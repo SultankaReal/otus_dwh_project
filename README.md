@@ -62,9 +62,9 @@
     dbt build -s tag:marts --full-refresh
     ```
 
-![Alt text](image-5.png)
+![Alt text](image-9.png)
 
 
 ## [Cyberattacks dashboard analysis in datalens](https://datalens.yandex/l0ad2z232rv8a)
 
-![Alt text](image-7.png)
+![Alt text](image-8.png)
