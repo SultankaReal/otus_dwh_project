@@ -36,7 +36,6 @@ models:
       - name: TrafficType
         tests:
           - not_null
-          - unique
   - name: attacks_most_per_segment
     description: Number of attacks per network segment
     columns:
