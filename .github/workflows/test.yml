@@ -1,0 +1,43 @@
+name: Continuous Integration Tests
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  clickhouse:
+    name: Clickhouse CI tests
+    strategy:
+      matrix:
+        version: [23.9]      
+    services:
+      clickhouse:
+        image: clickhouse/clickhouse-server:${{ matrix.version }}
+        ports:
+          - 9000:9000
+          - 8123:8123
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - name: wait for services to start up
+        run: sleep 10
+      - name: dbt version
+        uses: kzzzr/mybi-dbt-action@v4
+        with:
+          command: dbt --version
+      - name: dbt debug
+        uses: kzzzr/mybi-dbt-action@v4
+        with:
+          command: dbt debug --target ci
+      - name: dbt deps
+        uses: kzzzr/mybi-dbt-action@v4
+        with:
+          command: dbt seed --target ci
+      - name: dbt build
+        uses: kzzzr/mybi-dbt-action@v4
+        with:
+          command: dbt build --full-refresh --target ci
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        if: ${{ failure() }}
+        timeout-minutes: 10

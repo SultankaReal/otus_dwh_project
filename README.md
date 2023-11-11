@@ -44,6 +44,7 @@
 5. Make sure dbt can connect to your target database:
     
     ```bash
+    cd ..
     dbt debug
     ```
 
