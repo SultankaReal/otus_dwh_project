@@ -1,4 +1,4 @@
-select `Traffic Type` as TrafficType, `Malware Indicators` as MalInd, `Attack Type` as AttackType, `Anomaly Scores` as AnomSco, `User Information` from otus.cybersecurity_attacks ca 
+select `Traffic Type` as TrafficType, `Malware Indicators` as MalInd, `Attack Type` as AttackType, `Anomaly Scores` as AnomSco, `User Information` from otus.cybersecurity_attacks 
 where TrafficType = 'DNS' and MalInd LIKE '%IoC Detected%' 
 and `Alerts/Warnings` not like '%Triggered%' 
 and `Severity Level` = 'High' 

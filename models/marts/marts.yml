@@ -1,56 +1,60 @@
+---
 version: 2
-
 models:
-    - name: attacks_number_of_attack_types
-      description: Number of attacks per attack type
-      columns:
-        - name: AttackType
-          tests:
-            - not_null
-            - unique
-    - name: attacks_number_of_attacks_proto
-      description: Number of attacks per protocol
-      columns: 
-        - name: Protocol
-          tests:
-            - unique
-    - name: attacks_number_of_attacks_sev_level
-      description: Number of attacks for every severity level
-      columns: 
-        - name: Severity
-          tests:
-            - unique
-    - name: attacks_each_year
-      description: Number of attacks per year (since 2020 until 2023)
-      columns: 
-        - name: Year
-          tests:
-            - not_null
-            - unique
-    - name: attacks_intrusion
-      description: Number of attacks with intrusion, high severity and without being triggered in alerts
-      columns: 
-        - name: TrafficType
-          tests:
-            - not_null
-    - name: attacks_most_per_segment
-      description: Number of attacks per network segment
-      columns: 
-        - name: NetworkSegment
-          tests:
-            - not_null
-            - unique
-    - name: attacks_with_without_alerts
-      description: Number of attacks without alerts
-      columns: 
-        - name: AlertWarn
-          tests:
-            - not_null
-            - unique
-    - name: attacks_ddos_not_blocked
-      description: Number of DDoS attacks with high severity and not being blocked
-      columns: 
-        - name: SourceIP
-          tests:
-            - not_null
-            - unique
+  - name: attacks_number_of_attack_types
+    description: Number of attacks per attack type
+    columns:
+      - name: AttackType
+        tests:
+          - not_null
+          - unique
+  - name: attacks_number_of_attacks_proto
+    description: Number of attacks per protocol
+    columns:
+      - name: Protocol
+        tests:
+          - not_null
+          - unique
+  - name: attacks_number_of_attacks_sev_level
+    description: Number of attacks for every severity level
+    columns:
+      - name: Severity
+        tests:
+          - not_null
+          - unique
+  - name: attacks_each_year
+    description: Number of attacks per year (since 2020 until 2023)
+    columns:
+      - name: Year
+        tests:
+          - not_null
+          - unique
+  - name: attacks_intrusion
+    description: Number of attacks with intrusion, high severity and without being
+      triggered in alerts
+    columns:
+      - name: TrafficType
+        tests:
+          - not_null
+          - unique
+  - name: attacks_most_per_segment
+    description: Number of attacks per network segment
+    columns:
+      - name: NetworkSegment
+        tests:
+          - not_null
+          - unique
+  - name: attacks_with_without_alerts
+    description: Number of attacks without alerts
+    columns:
+      - name: AlertWarn
+        tests:
+          - not_null
+          - unique
+  - name: attacks_ddos_not_blocked
+    description: Number of DDoS attacks with high severity and not being blocked
+    columns:
+      - name: SourceIP
+        tests:
+          - not_null
+          - unique

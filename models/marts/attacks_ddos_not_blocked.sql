@@ -1,4 +1,4 @@
-select `Source IP Address` as SourceIP, `Anomaly Scores` , `Device Information` from otus.cybersecurity_attacks ca 
+select `Source IP Address` as SourceIP, `Anomaly Scores` , `Device Information` from otus.cybersecurity_attacks 
 where `Attack Type` = 'DDoS' 
 and `Action Taken` not like '%Blocked%'
 and `Severity Level` = 'High'
