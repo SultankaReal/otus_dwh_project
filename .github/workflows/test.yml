@@ -1,9 +1,8 @@
 name: Continuous Integration Tests
 
 on:
-    push:
-      branches:
-        - main
+  pull_request:
+    branches: [ main ]
 
 jobs:
   clickhouse:
