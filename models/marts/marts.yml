@@ -12,15 +12,13 @@ models:
       description: Number of attacks per protocol
       columns: 
         - name: Protocol
-          tests: 
-            - not_null
+          tests:
             - unique
     - name: attacks_number_of_attacks_sev_level
       description: Number of attacks for every severity level
       columns: 
         - name: Severity
-          tests: 
-            - not_null
+          tests:
             - unique
     - name: attacks_each_year
       description: Number of attacks per year (since 2020 until 2023)

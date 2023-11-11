@@ -30,7 +30,7 @@ jobs:
         uses: kzzzr/mybi-dbt-action@v4
         with:
           command: dbt debug --target ci
-      - name: dbt deps
+      - name: dbt seed
         uses: kzzzr/mybi-dbt-action@v4
         with:
           command: dbt seed --target ci
@@ -38,7 +38,3 @@ jobs:
         uses: kzzzr/mybi-dbt-action@v4
         with:
           command: dbt build --full-refresh --target ci
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: ${{ failure() }}
-        timeout-minutes: 10
