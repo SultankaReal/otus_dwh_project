@@ -66,6 +66,5 @@
 ![Alt text](image-9.png)
 
 
-## [Cyberattacks dashboard analysis in datalens](https://datalens.yandex/l0ad2z232rv8a)
-
+## Cyberattacks dashboard analysis in datalens
 ![Alt text](image-8.png)
